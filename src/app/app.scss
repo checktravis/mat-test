@@ -18,8 +18,8 @@
       box-sizing: border-box;
       height: 64px;
       width: 100%;
-      background-color: rgb(81,45,168);       
-      // float: left;
+      background-color: rgb(81, 45, 168);
+      position: relative;
       a {
         margin: 0;
         border: none;
@@ -40,26 +40,64 @@
         font-weight: 500;
         /* font-size: 14px; */
         text-transform: uppercase;
-        color: rgba(255,255,255,.6);
+        color: rgba(255, 255, 255, .6);
         overflow: hidden;
+        top: 2px;
         &.router-link-exact-active {
-          color: rgb(255, 255, 255);
-          // height: 48px;
-        // line-height: 48px;
+          color: rgb(255, 255, 255); // height: 48px;
+          // line-height: 48px;
         }
         &.router-link-exact-active:after {
           background-color: white;
           height: 4px;
-          height: 2px;
           width: 100%;
           display: block;
           content: " ";
           bottom: 0;
           left: 0;
           position: absolute;
-          -webkit-animation: border-expand .2s cubic-bezier(.4,0,.4,1).01s alternate forwards;
-          animation: border-expand .2s cubic-bezier(.4,0,.4,1).01s alternate forwards;
-          transition: all 1s cubic-bezier(.4,0,1,1)        
+          -webkit-animation: border-expand .2s cubic-bezier(.4, 0, .4, 1).01s alternate forwards;
+          animation: border-expand .2s cubic-bezier(.4, 0, .4, 1).01s alternate forwards;
+          transition: all 1s cubic-bezier(.4, 0, 1, 1)
+        }
+      }
+      button {
+        position: absolute;
+        right: 40px;
+        top: 36px;
+        z-index: 999;
+        border-radius: 50%;
+        font-size: 24px;
+        height: 56px;
+        margin: auto;
+        min-width: 56px;
+        width: 56px;
+        padding: 0;
+        overflow: hidden;
+        // line-height: normal;
+        background: rgb(255,64,129);
+        color: rgb(255,255,255);  
+        box-shadow: 0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);
+        border: none;  
+        i {
+          vertical-align: middle;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-12px,-12px);
+          transform: translate(-12px,-12px);
+          line-height: 24px;
+          width: 24px ;     
+        }    
+        .visuallyhidden {
+          border: 0;
+          clip: rect(0 0 0 0);
+          height: 1px;
+          margin: -1px;
+          overflow: hidden;
+          padding: 0;
+          position: absolute;
+          width: 1px;      
         }
       }
     }
