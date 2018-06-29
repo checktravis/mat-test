@@ -1,52 +1,21 @@
 <div id="app">
   <header>
     <div class="header-row">
-    </div>
-    <div class="header-row">
       <h3>Name &amp; Title</h3>
     </div>
-    <div class="header-row">
-    </div>
-    <div class="tab-bar-container">
-      <div class="tab-bar">
-        <a href="#overview" class="mdl-layout__tab is-active">Overview
-          <span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple">
-            <span class="mdl-ripple"></span>
-          </span>
-        </a>
-        <a href="#features" class="mdl-layout__tab">Features
-          <span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple">
-            <span class="mdl-ripple"></span>
-          </span>
-        </a>
-        <a href="#features" class="mdl-layout__tab">Details
-          <span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple">
-            <span class="mdl-ripple"></span>
-          </span>
-        </a>
-        <a href="#features" class="mdl-layout__tab">Technology
-          <span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple">
-            <span class="mdl-ripple"></span>
-          </span>
-        </a>
-        <a href="#features" class="mdl-layout__tab">FAQ
-          <span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple">
-            <span class="mdl-ripple"></span>
-          </span>
-        </a>
-        <button>
-          <i class="material-icons" role="presentation">add</i>
-          <span class="visuallyhidden">Add</span>
-          <span class="mdl-button__ripple-container">
-            <span class="mdl-ripple"></span>
-          </span>
-        </button>
-      </div>
+    <div class="nav-row">
+      <router-link to="/">Overview</router-link> |
+      <router-link to="/about">About</router-link>
+      <button>
+        <i class="material-icons" role="presentation">add</i>
+        <span class="visuallyhidden">Add</span>
+        <span class="mdl-button__ripple-container">
+          <span class="mdl-ripple"></span>
+        </span>
+      </button>
     </div>
   </header>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+  <main>
+    <router-view/>
+  </main>
 </div>
